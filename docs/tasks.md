@@ -26,7 +26,7 @@ Plano de execução sequenciado para implementar `spec.md` via TDD. Faça uma ta
   - Teste: dois registros com o mesmo `document` viram a mesma entidade, mesmo com `name` divergente.
   - Implementação: unificar entidades pelo `document` normalizado (primeiro na ordem de confiança).
 
-- [ ] **T6 — Conflito de** `document` *(RF3)*
+- [x] **T6 — Conflito de** `document` *(RF3)*
   - Teste: registros com `document` diferentes (ex.: mesmo `name`, sem auxiliares suficientes) permanecem entidades distintas.
   - Implementação: tratar conflito de identificadores únicos como entidades diferentes.
 
