@@ -18,7 +18,7 @@ Plano de execução sequenciado para implementar `spec.md` via TDD. Faça uma ta
   - Teste: valores com caracteres especiais diferentes normalizam para o mesmo valor comparável.
   - Implementação: remover caracteres especiais e comparar apenas o valor normalizado (strong identifier).
 
-- [ ] **T4 — Normalização de** `name` *(RF2)*
+- [x] **T4 — Normalização de** `name` *(RF2)*
   - Teste: variações de caixa, acentos, pontuação e espaços extras normalizam para o mesmo `name` em Uppercase.
   - Implementação: normalizar `name` removendo essas diferenças; padrão Uppercase.
 
