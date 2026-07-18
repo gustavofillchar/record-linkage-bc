@@ -1,0 +1,28 @@
+{
+  "name": "record-linkage-bc",
+  "version": "1.0.0",
+  "description": "Serviço em TypeScript para ingerir vínculos entre entidades de múltiplas fontes e consultar conexões em até N saltos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "test:run": "vitest run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavofillchar/record-linkage-bc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/gustavofillchar/record-linkage-bc/issues"
+  },
+  "homepage": "https://github.com/gustavofillchar/record-linkage-bc#readme",
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "tsx": "^4.23.1",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
+  }
+}
