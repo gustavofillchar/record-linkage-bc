@@ -1,0 +1,93 @@
+[
+  {
+    "sourceEntity": {
+      "name": "Metalurgica Alianca",
+      "document": "12345678000190"
+    },
+    "relatedEntity": {
+      "name": "Importadora Atlântico Ltda",
+      "document": "22.222.222/0001-22"
+    },
+    "relationshipType": "same_address_as",
+    "sourceName": "receita-federal",
+    "capturedAt": "2023-06-20T00:00:00.000Z"
+  },
+  {
+    "sourceEntity": {
+      "name": "Holding Vale SA",
+      "document": "33.333.333/0001-33"
+    },
+    "relatedEntity": {
+      "name": "Indústria Química Bandeirante",
+      "document": "44.444.444/0001-44"
+    },
+    "relationshipType": "controls",
+    "sourceName": "receita-federal",
+    "capturedAt": "2023-06-20T00:00:00.000Z"
+  },
+  {
+    "sourceEntity": {
+      "name": "Solaris Energia Renovavel Ltda",
+      "document": "55.666.777/0001-88"
+    },
+    "relatedEntity": {
+      "name": "SolarTech Componentes",
+      "document": "66.777.888/0001-99"
+    },
+    "relationshipType": "member_of",
+    "sourceName": "receita-federal",
+    "capturedAt": "2023-06-22T00:00:00.000Z"
+  },
+  {
+    "sourceEntity": {
+      "name": "Indústria Têxtil São José",
+      "document": "88.111.111/0001-11"
+    },
+    "relatedEntity": {
+      "name": "Importadora Atlântico Ltda",
+      "document": "22.222.222/0001-22"
+    },
+    "relationshipType": "same_address_as",
+    "sourceName": "receita-federal",
+    "capturedAt": "2023-07-01T00:00:00.000Z"
+  },
+  {
+    "sourceEntity": {
+      "name": "Holding Vale S/A",
+      "document": "33.333.333/0001-33"
+    },
+    "relatedEntity": {
+      "name": "Construtora Horizonte S/A",
+      "document": "95.444.555/0001-66"
+    },
+    "relationshipType": "partners_with",
+    "sourceName": "receita-federal",
+    "capturedAt": "2023-07-14T00:00:00.000Z"
+  },
+  {
+    "sourceEntity": {
+      "name": "SolarTech Componentes",
+      "document": "66.777.888/0001-99"
+    },
+    "relatedEntity": {
+      "name": "Eletrosul Distribuidora Ltda",
+      "document": "67.888.999/0001-00"
+    },
+    "relationshipType": "supplies",
+    "sourceName": "receita-federal",
+    "capturedAt": "2023-07-28T00:00:00.000Z"
+  },
+  {
+    "sourceEntity": {
+      "name": "Marcos Tavares",
+      "document": "777.888.999-00"
+    },
+    "relatedEntity": {
+      "name": "Auto Pecas Tavares",
+      "document": "30111222000144"
+    },
+    "relationshipType": "owner_of",
+    "sourceName": "receita-federal",
+    "capturedAt": "2023-08-05T00:00:00.000Z"
+  }
+]

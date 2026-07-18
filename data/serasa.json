@@ -1,0 +1,93 @@
+[
+  {
+    "sourceEntity": {
+      "name": "Metalúrgica Aliancca SA",
+      "document": "12.345.678/0001-90"
+    },
+    "relatedEntity": {
+      "name": "Importadora Atlantico",
+      "document": "22.222.222/0001-22"
+    },
+    "relationshipType": "guarantees",
+    "sourceName": "serasa",
+    "capturedAt": "2023-11-12T00:00:00.000Z"
+  },
+  {
+    "sourceEntity": {
+      "name": "Escritório Contábil Silva",
+      "email": "contato@contabilidadesilva.com.br"
+    },
+    "relatedEntity": {
+      "name": "Metalúrgica Aliança S/A",
+      "document": "12.345.678/0001-90"
+    },
+    "relationshipType": "provides_accounting_for",
+    "sourceName": "serasa",
+    "capturedAt": "2023-11-15T00:00:00.000Z"
+  },
+  {
+    "sourceEntity": {
+      "name": "Nordeste Distribuidora Comercial",
+      "email": "contato@distribuidoranordeste.com.br"
+    },
+    "relatedEntity": {
+      "name": "Construtora Horizonte S/A",
+      "document": "95.444.555/0001-66"
+    },
+    "relationshipType": "same_address_as",
+    "sourceName": "serasa",
+    "capturedAt": "2023-11-21T00:00:00.000Z"
+  },
+  {
+    "sourceEntity": {
+      "name": "Cooperativa Agroindustrial Bandeirante",
+      "document": "20.333.444/0001-55"
+    },
+    "relatedEntity": {
+      "name": "Holding Vale S/A",
+      "document": "33.333.333/0001-33"
+    },
+    "relationshipType": "same_address_as",
+    "sourceName": "serasa",
+    "capturedAt": "2023-11-30T00:00:00.000Z"
+  },
+  {
+    "sourceEntity": {
+      "name": "Cooperativa Agroindustrial Bandeirante",
+      "document": "20.333.444/0001-55"
+    },
+    "relatedEntity": {
+      "name": "Distribuidora Nordeste Ltda",
+      "email": "contato@distribuidoranordeste.com.br"
+    },
+    "relationshipType": "guarantees",
+    "sourceName": "serasa",
+    "capturedAt": "2023-12-06T00:00:00.000Z"
+  },
+  {
+    "sourceEntity": {
+      "name": "Camila Duarte",
+      "document": "444.555.666-77"
+    },
+    "relatedEntity": {
+      "name": "Metalúrgica Aliança S/A",
+      "document": "12.345.678/0001-90"
+    },
+    "relationshipType": "guarantees",
+    "sourceName": "serasa",
+    "capturedAt": "2023-12-14T00:00:00.000Z"
+  },
+  {
+    "sourceEntity": {
+      "name": "Nordeste Distribuidora Comercial",
+      "email": "contato@distribuidoranordeste.com.br"
+    },
+    "relatedEntity": {
+      "name": "Holding Vale S/A",
+      "document": "33.333.333/0001-33"
+    },
+    "relationshipType": "partners_with",
+    "sourceName": "serasa",
+    "capturedAt": "2023-12-19T00:00:00.000Z"
+  }
+]

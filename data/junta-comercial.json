@@ -1,0 +1,98 @@
+[
+  {
+    "sourceEntity": {
+      "name": "Metalúrgica Aliança S/A",
+      "document": "12.345.678/0001-90",
+      "email": "contato@aliancametais.com.br"
+    },
+    "relatedEntity": {
+      "name": "Holding Vale S/A",
+      "document": "33.333.333/0001-33"
+    },
+    "relationshipType": "member_of",
+    "sourceName": "junta-comercial",
+    "capturedAt": "2023-01-10T00:00:00.000Z"
+  },
+  {
+    "sourceEntity": {
+      "name": "João Andrade",
+      "document": "111.111.111-11",
+      "email": "joao.andrade@aliancametais.com.br"
+    },
+    "relatedEntity": {
+      "name": "Metalúrgica Aliança S/A",
+      "document": "12.345.678/0001-90"
+    },
+    "relationshipType": "controls",
+    "sourceName": "junta-comercial",
+    "capturedAt": "2023-01-10T00:00:00.000Z"
+  },
+  {
+    "sourceEntity": {
+      "name": "Camila Duarte",
+      "document": "444.555.666-77",
+      "email": "camila.duarte@aliancametais.com.br"
+    },
+    "relatedEntity": {
+      "name": "Metalúrgica Aliança S/A",
+      "document": "12.345.678/0001-90"
+    },
+    "relationshipType": "officer_of",
+    "sourceName": "junta-comercial",
+    "capturedAt": "2023-01-18T00:00:00.000Z"
+  },
+  {
+    "sourceEntity": {
+      "name": "Maria Fernanda Costa",
+      "document": "222.333.444-55",
+      "email": "mfcosta@solarisenergia.com.br"
+    },
+    "relatedEntity": {
+      "name": "Solaris Energia Renovável Ltda",
+      "document": "55.666.777/0001-88",
+      "email": "contato@solarisenergia.com.br"
+    },
+    "relationshipType": "controls",
+    "sourceName": "junta-comercial",
+    "capturedAt": "2023-02-15T00:00:00.000Z"
+  },
+  {
+    "sourceEntity": {
+      "name": "Ricardo Nogueira",
+      "document": "555.666.777-88"
+    },
+    "relatedEntity": {
+      "name": "Solaris Energia Renovável Ltda",
+      "document": "55.666.777/0001-88"
+    },
+    "relationshipType": "officer_of",
+    "sourceName": "junta-comercial",
+    "capturedAt": "2023-02-15T00:00:00.000Z"
+  },
+  {
+    "sourceEntity": {
+      "name": "Ricardo Nogueira",
+      "document": "555.666.777-88"
+    },
+    "relatedEntity": {
+      "name": "Eletrosul Distribuidora Ltda",
+      "document": "67.888.999/0001-00"
+    },
+    "relationshipType": "controls",
+    "sourceName": "junta-comercial",
+    "capturedAt": "2023-03-02T00:00:00.000Z"
+  },
+  {
+    "sourceEntity": {
+      "name": "Marcos Tavares",
+      "document": "777.888.999-00"
+    },
+    "relatedEntity": {
+      "name": "Auto Peças Tavares Ltda",
+      "document": "30.111.222/0001-44"
+    },
+    "relationshipType": "owner_of",
+    "sourceName": "junta-comercial",
+    "capturedAt": "2023-03-20T00:00:00.000Z"
+  }
+]

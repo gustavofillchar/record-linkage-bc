@@ -54,6 +54,7 @@ Plano de execução sequenciado para implementar `spec.md` via TDD. Faça uma ta
   - **Suposições necessárias (decididas):** X é referenciada pelo `id` (identificador interno — sempre presente e único; `name` é ambíguo e `document` é opcional); `N` chega como parâmetro `maxHops` da consulta.
   - `findConnections` (`query.ts`) faz BFS nível a nível a partir de X: cada entidade é retornada **uma vez** pelo caminho mais curto em **hops**, com `path` (nós percorridos) e `relationships` (arestas percorridas). Start excluído do resultado; `maxHops < 1` ou X inexistente retornam vazio.
 
-- [ ] **T12 — Demonstração (opcional)** *(Escopo — transporte não obrigatório)*
+- [x] **T12 — Demonstração (opcional)** *(Escopo — transporte não obrigatório)*
   - Expor o comportamento via função CLI, pequeno servidor HTTP **ou** testes de ponta a ponta.
+  - **Escolha:** CLI (`npm run cli -- --start <ref> --hops <N>`, via `tsx`). Executa o fluxo completo sobre os dados de exemplo em `data/` (5 fontes): ingestão → normalização → resolução → grafo → consulta BFS. Instruções no `README`.
 

@@ -1,0 +1,93 @@
+[
+  {
+    "sourceEntity": {
+      "name": "Importadora Atlântico Ltda",
+      "document": "22.222.222/0001-22"
+    },
+    "relatedEntity": {
+      "name": "Transportadora Rio Verde",
+      "phone": "(11) 4004-4000"
+    },
+    "relationshipType": "partners_with",
+    "sourceName": "b3",
+    "capturedAt": "2023-09-05T00:00:00.000Z"
+  },
+  {
+    "sourceEntity": {
+      "name": "Rio Verde Transportes",
+      "phone": "1140044000"
+    },
+    "relatedEntity": {
+      "name": "Indústria Química Bandeirante",
+      "document": "44.444.444/0001-44"
+    },
+    "relationshipType": "supplies",
+    "sourceName": "b3",
+    "capturedAt": "2023-09-05T00:00:00.000Z"
+  },
+  {
+    "sourceEntity": {
+      "name": "Importadora Atlântico Ltda",
+      "document": "22.222.222/0001-22"
+    },
+    "relatedEntity": {
+      "name": "Distribuidora Nordeste Ltda",
+      "email": "contato@distribuidoranordeste.com.br"
+    },
+    "relationshipType": "controls",
+    "sourceName": "b3",
+    "capturedAt": "2023-09-19T00:00:00.000Z"
+  },
+  {
+    "sourceEntity": {
+      "name": "Cooperativa Agroindustrial Bandeirante",
+      "document": "20.333.444/0001-55"
+    },
+    "relatedEntity": {
+      "name": "Indústria Química Bandeirante",
+      "document": "44.444.444/0001-44"
+    },
+    "relationshipType": "supplies",
+    "sourceName": "b3",
+    "capturedAt": "2023-09-27T00:00:00.000Z"
+  },
+  {
+    "sourceEntity": {
+      "name": "Construtora Horizonte S/A",
+      "document": "95.444.555/0001-66"
+    },
+    "relatedEntity": {
+      "name": "Cooperativa Agroindustrial Bandeirante",
+      "document": "20.333.444/0001-55"
+    },
+    "relationshipType": "partners_with",
+    "sourceName": "b3",
+    "capturedAt": "2023-10-03T00:00:00.000Z"
+  },
+  {
+    "sourceEntity": {
+      "name": "Escritório Contábil Silva",
+      "email": "contato@contabilidadesilva.com.br"
+    },
+    "relatedEntity": {
+      "name": "Distribuidora Nordeste Ltda",
+      "email": "contato@distribuidoranordeste.com.br"
+    },
+    "relationshipType": "provides_accounting_for",
+    "sourceName": "b3",
+    "capturedAt": "2023-10-11T00:00:00.000Z"
+  },
+  {
+    "sourceEntity": {
+      "name": "Transportes Serra Azul Ltda",
+      "phone": "(51) 3344-2200"
+    },
+    "relatedEntity": {
+      "name": "Distribuidora Vinhos do Sul Ltda",
+      "document": "40.222.333/0001-11"
+    },
+    "relationshipType": "partners_with",
+    "sourceName": "b3",
+    "capturedAt": "2023-10-20T00:00:00.000Z"
+  }
+]
