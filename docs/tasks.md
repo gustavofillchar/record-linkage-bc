@@ -30,14 +30,15 @@ Plano de execução sequenciado para implementar `spec.md` via TDD. Faça uma ta
   - Teste: registros com `document` diferentes (ex.: mesmo `name`, sem auxiliares suficientes) permanecem entidades distintas.
   - Implementação: tratar conflito de identificadores únicos como entidades diferentes.
 
-- [ ] **T7 — Resolução por atributos auxiliares** *(RF3)*
+- [x] **T7 — Resolução por atributos auxiliares** *(RF3)*
   - Teste: sem `document`, `email`/`phone` coincidentes servem como evidência adicional para unificar.
   - Implementação: usar auxiliares como segundo nível da ordem de confiança.
 
-- [ ] **T8 — Resolução por similaridade de** `name` *(RF3)*
+- [x] **T8 — Resolução por similaridade de** `name` *(RF3)*
   - Teste: sem `document` nem auxiliares suficientes, `name` suficientemente semelhante (após normalização) unifica as entidades.
   - Implementação: aplicar comparação de similaridade como último nível.
   - Nota: a estratégia de similaridade é decisão de implementação e pode ser ajustada pelos testes.
+  - **Correção do T7 (evidência adicional):** `email`/`phone` deixaram de ser chave única (caso do email da contabilidade compartilhado). Passaram a **corroborar** a similaridade de `name` com 2 limiares — nome forte unifica sozinho; nome fraco só unifica com `email`/`phone` coincidente. T7 e T8 ficaram integrados em `matchesByName`. Similaridade via Jaccard de tokens (`similarity.ts`).
 
 - [ ] **T9 — Ingestão** *(RF1)*
   - Teste: dado um conjunto de registros de múltiplas fontes, o pipeline produz entidades resolvidas e a lista de `Relationship`.

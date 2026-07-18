@@ -68,6 +68,12 @@ Regras de resolução:
 
 > A estratégia de comparação de similaridade é uma **decisão de implementação** e pode ser ajustada conforme os resultados dos testes.
 
+**Refinamento — `email`/`phone` como evidência adicional (não são chave):** `email` e `phone` são *quasi-identifiers* e podem ser compartilhados por entidades distintas (ex.: o email/telefone da contabilidade cadastrado em várias empresas). Por isso **não unificam sozinhos**. Eles **corroboram** a similaridade de `name`, com dois limiares:
+
+- `name` **fortemente** similar → unifica sozinho (último recurso);
+- `name` **fracamente** similar → unifica **apenas se** `email`/`phone` também coincidirem;
+- conflito de `document` **sempre** bloqueia a unificação.
+
 
 
 ### RF4 — Consulta de conexões
@@ -142,6 +148,7 @@ Adotadas por se tratar de um **exercício fictício** (base para as regras de RF
 - **Suposição necessária:** os atributos usados na resolução (`name`, `document`, `email`, `phone`) acompanham os registros de entrada. O formato sugerido em `challenge.md` cita apenas `sourceEntity`, `relatedEntity`, `relationshipType`, `sourceName` e `capturedAt`.
 - **Suposição necessária:** não está claro como referenciar a entidade X na consulta (por `id`, `name` ou `document`).
 - **Suposição necessária:** o `N` de saltos vem como parâmetro na consulta.
+- **Suposição necessária:** a RF2 só especifica normalização de `document` e `name`. Para o match por atributos auxiliares (RF3), assume-se normalização de `email` (lowercase + trim) e `phone` (apenas dígitos) antes da comparação, para tolerar diferenças de caixa e formatação entre fontes.
 
 ---
 

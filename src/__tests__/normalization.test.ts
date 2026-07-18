@@ -1,5 +1,10 @@
 import { describe, it, expect } from "vitest";
-import { normalizeDocument, normalizeName } from "../domain/normalization";
+import {
+  normalizeDocument,
+  normalizeName,
+  normalizeEmail,
+  normalizePhone,
+} from "../domain/normalization";
 
 describe("normalizeDocument", () => {
   it("normalizes the same document written with different special characters to one comparable value", () => {
@@ -57,5 +62,19 @@ describe("normalizeName", () => {
       "IMPORTADORA COMERCIAL ATLANTICO LTDA",
     );
     expect(normalizeName("Nova Era Participações S/A")).toBe("NOVA ERA PARTICIPACOES S A");
+  });
+});
+
+describe("normalizeEmail", () => {
+  it("lowercases and trims", () => {
+    expect(normalizeEmail("  Financeiro@AliancaMetais.COM.BR ")).toBe(
+      "financeiro@aliancametais.com.br",
+    );
+  });
+});
+
+describe("normalizePhone", () => {
+  it("keeps only digits", () => {
+    expect(normalizePhone("(11) 4004-4000")).toBe("1140044000");
   });
 });
