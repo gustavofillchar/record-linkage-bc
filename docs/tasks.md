@@ -44,7 +44,7 @@ Plano de execução sequenciado para implementar `spec.md` via TDD. Faça uma ta
   - Teste: dado um conjunto de registros de múltiplas fontes, o pipeline produz entidades resolvidas e a lista de `Relationship`.
   - Implementação: orquestrar normalização (T3–T4) + resolução (T5–T8); preservar `capturedAt` e `sourceName` como metadata (Restrições), sem influenciar a resolução.
 
-- [ ] **T10 — Construção do grafo** *(Restrições)*
+- [x] **T10 — Construção do grafo** *(Restrições)*
   - Teste: relationships geram arestas (edges) **bidirecionais** em grafo **não ponderado**; entidades resolvidas são os nós.
   - Implementação: montar o grafo in-memory a partir das entidades e relationships.
 

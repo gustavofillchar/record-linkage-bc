@@ -33,3 +33,13 @@ export interface IngestionResult {
   entities: Entity[];
   relationships: Relationship[];
 }
+
+export interface GraphEdge {
+  to: string;
+  relationship: Relationship;
+}
+
+export interface Graph {
+  nodes: Map<string, Entity>;
+  adjacency: Map<string, GraphEdge[]>;
+}
