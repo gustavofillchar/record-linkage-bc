@@ -43,3 +43,10 @@ export interface Graph {
   nodes: Map<string, Entity>;
   adjacency: Map<string, GraphEdge[]>;
 }
+
+export interface Connection {
+  entity: Entity;
+  hops: number;
+  path: Entity[];
+  relationships: Relationship[];
+}

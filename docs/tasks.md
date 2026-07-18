@@ -48,10 +48,11 @@ Plano de execução sequenciado para implementar `spec.md` via TDD. Faça uma ta
   - Teste: relationships geram arestas (edges) **bidirecionais** em grafo **não ponderado**; entidades resolvidas são os nós.
   - Implementação: montar o grafo in-memory a partir das entidades e relationships.
 
-- [ ] **T11 — Consulta BFS por N hops** *(RF4)*
+- [x] **T11 — Consulta BFS por N hops** *(RF4)*
   - Teste: dada a entidade X e N, retorna quem está conectado dentro de N hops, com os paths e os relationships percorridos; distância em **hops** (não degree).
   - Implementação: BFS a partir de X limitado a N hops, retornando os caminhos.
-  - **Suposições necessárias** a decidir aqui: como referenciar X (`id`, `name` ou `document`) e receber `N` como parâmetro da consulta.
+  - **Suposições necessárias (decididas):** X é referenciada pelo `id` (identificador interno — sempre presente e único; `name` é ambíguo e `document` é opcional); `N` chega como parâmetro `maxHops` da consulta.
+  - `findConnections` (`query.ts`) faz BFS nível a nível a partir de X: cada entidade é retornada **uma vez** pelo caminho mais curto em **hops**, com `path` (nós percorridos) e `relationships` (arestas percorridas). Start excluído do resultado; `maxHops < 1` ou X inexistente retornam vazio.
 
 - [ ] **T12 — Demonstração (opcional)** *(Escopo — transporte não obrigatório)*
   - Expor o comportamento via função CLI, pequeno servidor HTTP **ou** testes de ponta a ponta.
