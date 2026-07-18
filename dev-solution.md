@@ -8,18 +8,38 @@ A primeira parte do problema e talvez a mais delicada é sobre o tratamento e in
 
 Como estamos tratando de um exercício fictício vou assumir algumas premissas base:
 
-- Caso registros possuam um identificador único em comum (ex: CPF, CNPJ ou outro identificador equivalente), serão considerados a mesma entidade.
+- Caso registros possuam um identificador único em comum (ex: CPF, CNPJ ou outro identificador equivalente), serão considerados a mesma entidade, mesmo que os demais atributos (como o nome) divirjam entre as fontes.
 - Caso não exista um identificador único, registros poderão ser considerados a mesma entidade caso possuam nomes suficientemente semelhantes após um processo de normalização.
-- Uma entidade pode aparecer com nomes ou atributos descritivos diferentes entre fontes distintas. Caso exista um identificador único em comum, como CPF ou CNPJ, será considerada a mesma entidade independentemente da diferença nos demais atributos.
 - A utilização de atributos auxiliares, como email e telefone, poderá ser utilizada como evidência adicional durante o processo de resolução.
 - Em caso de conflito entre identificadores únicos, os registros serão tratados como entidades diferentes.
   - Exemplo: registros com o mesmo nome, mas CPFs diferentes, sem atributos auxiliares suficientes para confirmar a relação, serão considerados entidades distintas.
 
+O domínio vai ser tratado de forma genérica. Uma entidade representa qualquer elemento identificado pelas fontes de dados, não sendo limitada a um tipo específico como pessoa física, jurídica, etc.
+
 A segunda parte do problema deve ser uma consulta baseada na teoria dos grafos. Uma das necessidades da solução é conseguir trazer a quantidade de saltos (hops) entre os nós para identificar a distancia deste relacionamento entre os nós e não deve ser confundida com graus (degree), obviamente são conceitos diferentes. Considerar as nomeclaturas em inglês no código.
 
-Para as consultas no grafo, vamos utilizar o algoritmo em busca por largura - BFS, pois ele é o mais adequado para buscar relacionamentos em nós por quantidade de saltos (hops), retornando as conexões entre as entidades mais próximas primeiro.
+## Normalização e resolução de entidades
 
-Vamos manter a consulta via CLI por enquanto, caso sobre tempo vou incluir um server HTTP, mas isso seria um bonus. Vou focar inteiramente em construir a solução robusta e elegante primeiro.
+Para reduzir divergências entre fontes diferentes, será aplicada uma etapa de normalização antes da comparação dos registros.
+
+Campos como `document` serão tratados como identificadores fortes, removendo caracteres especiais e comparando apenas o valor normalizado.
+
+Campos descritivos como `name` serão normalizados removendo diferenças de caixa, acentos, pontuação e espaços extras, permitindo tratar variações comuns entre fontes.
+
+A resolução seguirá uma ordem de confiança:
+- identificadores únicos como CPF/CNPJ;
+- atributos auxiliares como email e telefone;
+- similaridade de atributos descritivos quando não existirem informações suficientes.
+
+A estratégia utilizada para comparação de similaridade será uma decisão de implementação e poderá ser ajustada conforme os resultados encontrados durante os testes.
+
+## Suposições necessárias
+
+Tem alguns pontos que o desafio não detalha e que eu tive que assumir:
+
+- Os atributos que uso na resolução (`name`, `document`, `email`, `phone`) vêm junto com os registros de entrada. O formato sugerido no `challenge.md` só cita `sourceEntity`, `relatedEntity`, `relationshipType`, `sourceName` e `capturedAt`, mas parto do princípio que os dados da entidade acompanham.
+- Não ficou claro como referenciar a entidade X na consulta (por `id`, `name` ou `document`).
+- Assumo que o `N` de saltos vem como parâmetro na consulta.
 
 ## Stack e metodologia de desenvolvimento
 
@@ -45,7 +65,7 @@ Vamos optar por seguir com as seguintes especificações:
 
 A forma que vamos representar as entidades e os relacionamentos existentes entre elas.
 
-#### Entity
+### Entity
 
 Será a representação de uma entidade resolvida após o processo de ingestão dos dados.
 
@@ -86,5 +106,4 @@ Regras:
 - Exemplos:
   - `member_of`
   - `same_address_as`
-- O relacionamento não possui peso.
 - Cada relacionamento representa uma aresta no grafo.
