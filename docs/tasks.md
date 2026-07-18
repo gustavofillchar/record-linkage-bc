@@ -22,7 +22,7 @@ Plano de execução sequenciado para implementar `spec.md` via TDD. Faça uma ta
   - Teste: variações de caixa, acentos, pontuação e espaços extras normalizam para o mesmo `name` em Uppercase.
   - Implementação: normalizar `name` removendo essas diferenças; padrão Uppercase.
 
-- [ ] **T5 — Resolução por** `document` *(RF3)*
+- [x] **T5 — Resolução por** `document` *(RF3)*
   - Teste: dois registros com o mesmo `document` viram a mesma entidade, mesmo com `name` divergente.
   - Implementação: unificar entidades pelo `document` normalizado (primeiro na ordem de confiança).
 

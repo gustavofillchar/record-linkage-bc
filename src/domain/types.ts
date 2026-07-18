@@ -13,3 +13,10 @@ export interface Relationship {
   sourceName: string;
   capturedAt: Date;
 }
+
+export type EntityInput = Omit<Entity, "id">;
+
+export interface ResolutionResult {
+  entities: Entity[];
+  assignments: string[];
+}

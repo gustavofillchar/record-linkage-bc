@@ -33,3 +33,4 @@ vitest.config.ts.timestamp-*
 
 # Material de preparação do desafio (local, não versionar)
 00-jspm_packages/
+DEV-DRAFTS.md
