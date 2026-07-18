@@ -14,7 +14,7 @@ Plano de execução sequenciado para implementar `spec.md` via TDD. Faça uma ta
   - Definir as interfaces `Entity` e `Relationship` conforme a spec.
   - Sem teste dedicado (apenas tipos); serão exercitados pelas tarefas seguintes.
 
-- [ ] **T3 — Normalização de** `document` *(RF2)*
+- [x] **T3 — Normalização de** `document` *(RF2)*
   - Teste: valores com caracteres especiais diferentes normalizam para o mesmo valor comparável.
   - Implementação: remover caracteres especiais e comparar apenas o valor normalizado (strong identifier).
 
