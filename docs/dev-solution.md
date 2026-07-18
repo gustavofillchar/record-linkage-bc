@@ -20,11 +20,11 @@ A segunda parte do problema deve ser uma consulta baseada na teoria dos grafos. 
 
 ## Normalização e resolução de entidades
 
-Para reduzir divergências entre fontes diferentes, será aplicada uma etapa de normalização antes da comparação dos registros.
+Para reduzir divergências entre fontes diferentes, será aplicada uma etapa inicial de normalização antes da comparação dos registros.
 
 Campos como `document` serão tratados como identificadores fortes, removendo caracteres especiais e comparando apenas o valor normalizado.
 
-Campos descritivos como `name` serão normalizados removendo diferenças de caixa, acentos, pontuação e espaços extras, permitindo tratar variações comuns entre fontes.
+Campos descritivos como `name` serão normalizados removendo diferenças de caixa, acentos, pontuação e espaços extras, permitindo tratar variações comuns entre fontes. Manter tudo em Uppercase como padrão.
 
 A resolução seguirá uma ordem de confiança:
 - identificadores únicos como CPF/CNPJ;
@@ -46,6 +46,8 @@ Tem alguns pontos que o desafio não detalha e que eu tive que assumir:
 Vamos seguir o que foi proposto, utilizando Typescript e Vitest como infraestrutura para os testes. Também vamos utilizar a metodologia baseado em TDD para adequar o desenvolvimento ao que usam na empresa. Já estou com o repositório publico no Github.
 
 Vamos manter o código bem production-grade, independente do tamanho do projeto. Com isso quero dizer, manter o código limpo, sem comentários no código, o próprio código deve ser legível o suficiente seguindo boas práticas de desenvolvimento clean code.
+
+Não será necessário persistir os dados gerados, apenas in-memory.
 
 - TypeScript
 - Vitest
