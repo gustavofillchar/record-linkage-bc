@@ -40,7 +40,7 @@ Plano de execução sequenciado para implementar `spec.md` via TDD. Faça uma ta
   - Nota: a estratégia de similaridade é decisão de implementação e pode ser ajustada pelos testes.
   - **Correção do T7 (evidência adicional):** `email`/`phone` deixaram de ser chave única (caso do email da contabilidade compartilhado). Passaram a **corroborar** a similaridade de `name` com 2 limiares — nome forte unifica sozinho; nome fraco só unifica com `email`/`phone` coincidente. T7 e T8 ficaram integrados em `matchesByName`. Similaridade via Jaccard de tokens (`similarity.ts`).
 
-- [ ] **T9 — Ingestão** *(RF1)*
+- [x] **T9 — Ingestão** *(RF1)*
   - Teste: dado um conjunto de registros de múltiplas fontes, o pipeline produz entidades resolvidas e a lista de `Relationship`.
   - Implementação: orquestrar normalização (T3–T4) + resolução (T5–T8); preservar `capturedAt` e `sourceName` como metadata (Restrições), sem influenciar a resolução.
 

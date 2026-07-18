@@ -20,3 +20,16 @@ export interface ResolutionResult {
   entities: Entity[];
   assignments: string[];
 }
+
+export interface LinkRecord {
+  sourceEntity: EntityInput;
+  relatedEntity: EntityInput;
+  relationshipType: string;
+  sourceName: string;
+  capturedAt: Date;
+}
+
+export interface IngestionResult {
+  entities: Entity[];
+  relationships: Relationship[];
+}
