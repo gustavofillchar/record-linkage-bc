@@ -2,6 +2,10 @@
 
 Serviço em TypeScript para ingerir vínculos entre entidades de múltiplas fontes e consultar conexões em até N saltos.
 
+> ### 🎥 [**Assista à demonstração no Loom**](https://www.loom.com/share/9511b8911cdd418c912d3102ef88803f)
+>
+> Walkthrough do projeto: arquitetura, decisões e a CLI em ação.
+
 ## Stack
 
 - Node.js 24.18.0 (LTS)
